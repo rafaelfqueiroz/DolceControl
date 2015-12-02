@@ -1,6 +1,6 @@
 package com.github.rafaelfqueiroz.dolcecontrol.domain;
 
-public abstract class AbstractRoom implements Room {
+public abstract class AbstractPlace implements Place {
 
 	private int number;
 	private double costForStay;

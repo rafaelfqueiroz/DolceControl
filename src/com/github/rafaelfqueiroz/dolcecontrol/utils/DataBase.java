@@ -3,11 +3,11 @@ package com.github.rafaelfqueiroz.dolcecontrol.utils;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.github.rafaelfqueiroz.dolcecontrol.domain.Room;
+import com.github.rafaelfqueiroz.dolcecontrol.domain.Place;
 
 public class DataBase {
 
-	private static List<Room> rooms = new LinkedList<Room>();
+	private static List<Place> rooms = new LinkedList<Place>();
 	
 	private static DataBase dataBase;
 	
@@ -22,7 +22,7 @@ public class DataBase {
 		return dataBase;
 	}
 	
-	public static List<Room> getRooms() {
+	public static List<Place> getRooms() {
 		return rooms;
 	}
 	

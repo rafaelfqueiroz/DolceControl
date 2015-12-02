@@ -1,5 +1,5 @@
 package com.github.rafaelfqueiroz.dolcecontrol.domain;
 
-public class Apartment extends AbstractPlace {
+public class SuiteLuxury {
 
 }

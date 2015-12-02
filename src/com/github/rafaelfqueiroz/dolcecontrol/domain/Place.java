@@ -1,6 +1,6 @@
 package com.github.rafaelfqueiroz.dolcecontrol.domain;
 
-public interface Room {
+public interface Place {
 
 	public int getNumber();
 	public void setNumber(int number);
