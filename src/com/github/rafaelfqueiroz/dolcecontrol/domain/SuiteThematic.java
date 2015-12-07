@@ -1,5 +1,7 @@
 package com.github.rafaelfqueiroz.dolcecontrol.domain;
 
-public class SuiteThematic implements ThematicPlace {
+import com.github.rafaelfqueiroz.dolcecontrol.domain.interfaces.IThematicPlace;
+
+public class SuiteThematic implements IThematicPlace {
 
 }

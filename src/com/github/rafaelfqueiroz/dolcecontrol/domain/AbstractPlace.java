@@ -1,34 +1,63 @@
 package com.github.rafaelfqueiroz.dolcecontrol.domain;
 
-public abstract class AbstractPlace implements Place {
+import java.util.List;
 
-	private int number;
-	private double costForStay;
-	private int minimumTime;
-	private boolean status;
-	
-	public int getNumber() {
-		return number;
+import com.github.rafaelfqueiroz.dolcecontrol.domain.interfaces.exceptional.IAllocableExceptional;
+import com.github.rafaelfqueiroz.dolcecontrol.domain.interfaces.exceptional.IPlaceExceptional;
+import com.github.rafaelfqueiroz.dolcecontrol.domain.interfaces.normal.IAllocableNormal;
+import com.github.rafaelfqueiroz.dolcecontrol.domain.interfaces.normal.IPlaceNormal;
+
+public abstract class AbstractPlace
+		implements IPlaceNormal, IPlaceExceptional, IAllocableNormal, IAllocableExceptional {
+
+	private double aditionalUnitTimePrice; //@ in mAllocable;
+	//@ private represents mAditionalUnitTimePrice <- aditionalUnitTimePrice;
+	private List<Allocation> allocations; //@ in mAllocable;
+	//@ private represents mAllocations <- allocations;
+	private double minimumUnitTime; //@ in mAllocable;
+	//@ private represents mMinimumUnitTime <- minimumUnitTime;
+	private double minimumUnitTimePrice; //@ in mAllocable;
+	//@ private represents mMinimumUnitTimePrice <- minimumUnitTimePrice;
+	private double timeUnit; //@ in mAllocable;
+	//@ private represents mTimeUnit <- timeUnit;
+
+	public double getAditionalUnitTimePrice() {
+		return this.aditionalUnitTimePrice;
 	}
-	public void setNumber(int number) {
-		this.number = number;
+
+	public List<Allocation> getAllocations() {
+		return this.allocations;
 	}
-	public double getCostForStay() {
-		return costForStay;
+
+	public double getMinimumUnitTime() {
+		return this.minimumUnitTime;
 	}
-	public void setCostForStay(double costForStay) {
-		this.costForStay = costForStay;
+
+	public double getMinimumUnitTimePrice() {
+		return this.minimumUnitTimePrice;
 	}
-	public int getMinimumTime() {
-		return minimumTime;
+
+	public double getTimeUnit() {
+		return this.timeUnit;
 	}
-	public void setMinimumTime(int minimumTime) {
-		this.minimumTime = minimumTime;
+
+	public void setAditionalUnitTimePrice(double aditionalUnitTimePrice) {
+		this.aditionalUnitTimePrice = aditionalUnitTimePrice;
 	}
-	public boolean getStatus() {
-		return status;
+
+	public void setAllocations(List<Allocation> allocations) {
+		this.allocations = allocations;
 	}
-	public void setStatus(boolean status) {
-		this.status = status;
+
+	public void setMinimumUnitTime(double minimumUnitTime) {
+		this.minimumUnitTime = minimumUnitTime;
+	}
+
+	public void setMinimumUnitTimePrice(double minimumUnitTimePrice) {
+		this.minimumUnitTimePrice = minimumUnitTimePrice;
+	}
+
+	public void setTimeUnit(double timeUnit) {
+		this.timeUnit = timeUnit;
 	}
 }
